@@ -141,7 +141,7 @@ Perguntas de negócio:
 
 ![Estados que mais geram vendas](figures/estados_vendas.png)
 
-O volume de vendas está fortemente concentrado na região Sudeste. Só São Paulo tem mais de 80 mil vendas registradas.
+O volume de vendas está fortemente concentrado na região Sudeste. Só São Paulo tem quase 80 mil vendas registradas.
 
 - Quais categorias de produtos geram mais receita?
 
