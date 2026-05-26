@@ -135,13 +135,13 @@ Plataforma de marketplace online, semelhante ao Mercado Livre, onde vendedores e
 
 Perguntas de negócio:
 
-- **sales_analysis.sql**
+**sales_analysis.sql**
 
 - Quais estados geram mais vendas no e-commerce?
 
 ![Estados que mais geram vendas](figures/estados_vendas.png)
 
-O volume de vendas está fortemente concentrado na região Sudeste Só São Paulo tem mais de 80 mil vendas registradas.
+O volume de vendas está fortemente concentrado na região Sudeste. Só São Paulo tem mais de 80 mil vendas registradas.
 
 - Quais categorias de produtos geram mais receita?
 
@@ -155,7 +155,7 @@ Apenas três categorias ultrapassaram 1 milhão em receita, são elas: beleza e 
 
 A receita manteve uma tendência de alta, atingindo seu âpice no primeiro semestre de 2018. Nos últimos meses de análise, parece que a receita teve uma queda brusca, não necessariamente isso representa uma queda real, já que os últimos meses possuem poucos registros, indicando que o dataset pode estar incompleto nesse período.
 
-- **customer_analysis.sql**
+**customer_analysis.sql**
 
 - Quais estados possuem o maior volume de compras no e-commerce?
 
@@ -169,7 +169,7 @@ O volume de compras também está concentrado na região Sudeste, porém com uma
 
 A receita não aparenta estar excessivamente concentrada em poucos clientes, sugerindo uma base relativamente distribuída de consumidores.
 
-- **logistics_analysis.sql**
+**logistics_analysis.sql**
 
 análise_logística.png
 
@@ -181,7 +181,7 @@ Aproximadamente 12 dias.
 
 93% dos pedidos foram entregues dentro do prazo estimado.
 
-- **reviews_analysis.sql**
+**reviews_analysis.sql**
 
 - Qual a média de review_score dos pedidos?
 
@@ -197,7 +197,7 @@ As categorias que estão entre os pedidos que possuem melhores avaliações são
 
 *Análise feita dessa forma, pois as reviews estão associadas aos pedidos, e não aos produtos separadamente.*
 
-- **payments_analysis.sql**
+**payments_analysis.sql**
 
 - Quais métodos de pagamento são mais utilizados pelos clientes?
 
