@@ -1,0 +1,21 @@
+import pandas as pd
+
+customers = pd.read_csv("../data/olist_customers_dataset.csv")
+geolocation = pd.read_csv("../data/olist_geolocation_dataset.csv")
+orders = pd.read_csv("../data/olist_orders_dataset.csv")
+order_payments = pd.read_csv("../data/olist_order_payments_dataset.csv")
+order_reviews = pd.read_csv("../data/olist_order_reviews_dataset.csv")
+order_items = pd.read_csv("../data/olist_order_items_dataset.csv")
+products = pd.read_csv("../data/olist_products_dataset.csv")
+sellers = pd.read_csv("../data/olist_sellers_dataset.csv")
+product_category = pd.read_csv("../data/product_category_name_translation.csv")
+
+print(customers.info())
+print(geolocation.info())
+print(orders.info())
+print(order_payments.info())
+print(order_reviews.info())
+print(order_items.info())
+print(products.info())
+print(sellers.info())
+print(product_category.info())
