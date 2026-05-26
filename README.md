@@ -37,57 +37,59 @@ Abrir os arquivos .csv no Python (pandas) e explorar suas colunas e informaçõe
 
 ### Tabelas
 
-1. customers
+**1. customers**
 
-Colunas: customer_id (str), customer_unique_id (str), customer_zip_code_prefix (int), customer_city (str), customer_state (str)
+- Colunas: customer_id (str), customer_unique_id (str), customer_zip_code_prefix (int), customer_city (str), customer_state (str)
 
-Descrição: Tabela com informações dos clientes.
+- Descrição: Tabela com informações dos clientes.
 
-2. geolocation
+**2. geolocation**
 
-Colunas: geolocation_zip_code_prefix (int), geolocation_lat (float), geolocation_lng (float), geolocation_city (str), geolocation_state (str)
+- Colunas: geolocation_zip_code_prefix (int), geolocation_lat (float), geolocation_lng (float), geolocation_city (str), geolocation_state (str)
 
-Descrição: Tabela com informações geográficas relacionadas aos CEPs.
+- Descrição: Tabela com informações geográficas relacionadas aos CEPs.
 
-3. orders
+**3. orders**
 
-Colunas: order_id (str), customer_id (str), order_status (str), order_purchase_timestamp (str), order_approved_at (str), order_delivered_carrier_date (str), order_delivered_customer_date (str), order_estimated_delivery_date (str)
+- Colunas: order_id (str), customer_id (str), order_status (str), order_purchase_timestamp (str), order_approved_at (str), order_delivered_carrier_date (str), order_delivered_customer_date (str), order_estimated_delivery_date (str)
 
-Descrição: Tabela com informações gerais sobre os pedidos realizados.
+- Descrição: Tabela com informações gerais sobre os pedidos realizados.
 
-4. order_payments
+**4. order_payments**
 
-Colunas: order_id (str), payment_sequential (int), payment_type (str), payment_installments (int), payment_value (float)
+- Colunas: order_id (str), payment_sequential (int), payment_type (str), payment_installments (int), payment_value (float)
 
-Descrição: Tabela com informações sobre os pagamentos dos pedidos.
+- Descrição: Tabela com informações sobre os pagamentos dos pedidos.
 
-5. order_reviews
+**5. order_reviews**
 
-Colunas: review_id (str), order_id (str), review_score (int), review_comment_title (str), review_comment_message (str), review_creation_date (str), review_answer_timestamp (str)
+- Colunas: review_id (str), order_id (str), review_score (int), review_comment_title (str), review_comment_message (str), review_creation_date (str), review_answer_timestamp (str)
 
-Descrição: Tabela com as avaliações feitas pelos clientes para os pedidos.
+- Descrição: Tabela com as avaliações feitas pelos clientes para os pedidos.
 
-6. order_items
+**6. order_items**
 
-Colunas: order_id (str), order_item_id (int), product_id (str), seller_id (str), shipping_limit_date (str), price (float), freight_value (float)
+- Colunas: order_id (str), order_item_id (int), product_id (str), seller_id (str), shipping_limit_date (str), price (float), freight_value (float)
 
-Descrição: Tabela com os itens associados aos pedidos.
+- Descrição: Tabela com os itens associados aos pedidos.
 
-7. products
+**7. products**
 
-Colunas: product_id (str), product_category_name (str), product_name_lenght (float), product_description_lenght (float), product_photos_qty (float), product_weight_g (float), product_length_cm (float), product_height_cm (float), product_width_cm (float)
+- Colunas: product_id (str), product_category_name (str), product_name_lenght (float), product_description_lenght (float), product_photos_qty (float), product_weight_g (float), product_length_cm (float), product_height_cm (float), product_width_cm (float)
 
-Descrição: Tabela com informações sobre os produtos.
+- Descrição: Tabela com informações sobre os produtos.
 
-8. sellers: seller_id (str), seller_zip_code_prefix (int), seller_city (str), seller_state (str)
+**8. sellers**
 
-Descrição: Tabela com informações dos vendedores.
+- Colunas: seller_id (str), seller_zip_code_prefix (int), seller_city (str), seller_state (str)
 
-9. product_category
+- Descrição: Tabela com informações dos vendedores.
 
-Colunas: product_category_name (str), product_category_name_english (str)
+**9. product_category**
 
-Descrição: Tabela com as categorias dos produtos.
+- Colunas: product_category_name (str), product_category_name_english (str)
+
+- Descrição: Tabela com o nome das categorias dos produtos em português e inglês.
 
 ## Limpeza com Python
 
@@ -135,43 +137,41 @@ Plataforma de marketplace online, semelhante ao Mercado Livre, onde vendedores e
 
 Perguntas de negócio:
 
-**sales_analysis.sql**
+### sales_analysis.sql
 
 - Quais estados geram mais vendas no e-commerce?
 
-![Estados que mais geram vendas](figures/estados_vendas.png)
-
 O volume de vendas está fortemente concentrado na região Sudeste. Só São Paulo tem quase 80 mil vendas registradas.
+
+![Estados que mais geram vendas](figures/estados_vendas.png)
 
 - Quais categorias de produtos geram mais receita?
 
-![Categorias que mais geram receita](figures/categoria_receita.png)
-
 Apenas três categorias ultrapassaram 1 milhão em receita, são elas: beleza e saúde, relógios e cama, mesa e banho.
+
+![Categorias que mais geram receita](figures/categoria_receita.png)
 
 - Como a receita evoluiu ao longo dos meses?
 
-![Receita ao longo do tempo](figures/data_receita.png)
-
 A receita manteve uma tendência de alta, atingindo seu âpice no primeiro semestre de 2018. Nos últimos meses de análise, parece que a receita teve uma queda brusca, não necessariamente isso representa uma queda real, já que os últimos meses possuem poucos registros, indicando que o dataset pode estar incompleto nesse período.
 
-**customer_analysis.sql**
+![Receita ao longo do tempo](figures/data_receita.png)
+
+### customer_analysis.sql
 
 - Quais estados possuem o maior volume de compras no e-commerce?
 
-![Receita ao longo do tempo](figures/estados_compras.png)
-
 O volume de compras também está concentrado na região Sudeste, porém com uma distribuição mais equilibrada entre os estados.
+
+![Receita ao longo do tempo](figures/estados_compras.png)
 
 - A receita do e-commerce está concentrada em poucos clientes?
 
-![Receita por clientes](figures/receita_clientes.png)
-
 A receita não aparenta estar excessivamente concentrada em poucos clientes, sugerindo uma base relativamente distribuída de consumidores.
 
-**logistics_analysis.sql**
+![Receita por clientes](figures/receita_clientes.png)
 
-análise_logística.png
+### logistics_analysis.sql
 
 - Qual o tempo médio de entrega dos pedidos aos clientes?
 
@@ -181,26 +181,28 @@ Aproximadamente 12 dias.
 
 93% dos pedidos foram entregues dentro do prazo estimado.
 
-**reviews_analysis.sql**
+![Análise logística](figures/análise_logística.png)
+
+### reviews_analysis.sql
 
 - Qual a média de review_score dos pedidos?
 
-![Média de avaliação dos pedidos](figures/média_review_score.png)
-
 A média de avaliações dos pedidos é 4, num intervalo de 0 até 5. Indicando uma percepção geral positiva dos clientes em relação ao serviço.
+
+![Média de avaliação dos pedidos](figures/média_review_score.png)
 
 - Quais categorias estão entre os pedidos que possuem melhores avaliações?
 
-![Categoria por review score](figures/categoria_review_score.png)
-
 As categorias que estão entre os pedidos que possuem melhores avaliações são CDs e DVDs musicais, roupa infanto juvenil e livros de interesse geral.
+
+![Categoria por review score](figures/categoria_review_score.png)
 
 *Análise feita dessa forma, pois as reviews estão associadas aos pedidos, e não aos produtos separadamente.*
 
-**payments_analysis.sql**
+### payments_analysis.sql
 
 - Quais métodos de pagamento são mais utilizados pelos clientes?
 
-![Métodos de pagamento mais utilizados](figures/métodos_de_pagamento.png)
-
 O método de pagamento mais utilizado é cartão de crédito. 4 vezes mais utilizado do que o boleto, que ocupa a segunda posição.
+
+![Métodos de pagamento mais utilizados](figures/métodos_de_pagamento.png)
